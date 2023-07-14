@@ -11,3 +11,13 @@ export async function getPosts() {
     return null;
   }
 }
+
+export async function getPostById(id) {
+  const res = await fetch(baseUrl + "/wp/v2/posts/" + id);
+
+  if (res.ok) {
+    return res.json();
+  } else {
+    return null;
+  }
+}

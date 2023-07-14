@@ -57,7 +57,7 @@ function renderPost(post) {
   return `<div class="col-md-4">
     <div class="card mb-3">
       <div class="card-body">
-        <h5 class="card-title">${post.title.rendered}</h5>
+        <a class="card-title" href="post.html?id=${post.id}">${post.title.rendered}</a>
         <p class="card-text">
           ${post.excerpt.rendered}
         </p>
