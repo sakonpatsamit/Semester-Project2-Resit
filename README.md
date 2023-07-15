@@ -2,6 +2,6 @@
 
 ## Login Info
 
-# Username: sakon12
+# Email: sakonpatsamit@gmail.com
 
 # Password: Thedust12!
