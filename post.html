@@ -28,57 +28,23 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <a href="index.html" class="navbar-brand mb-0 h1">Frontend Noroff</a>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <a href="index.html" class="navbar-brand mb-0 h1">Frontend Noroff</a>
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="navbar-list">
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">Login</a>
+        <ul class="navbar-nav" id="navbar-list">
+          <li id="account">
+            <a class="btn btn-dark" href="login.html">Login</a>
           </li>
         </ul>
       </div>
-    </div>    
     </nav>
-    <div class="container vh-100 d-flex flex-column justify-content-center">
-        <div class="text-center" id="login-title">
-          <h1>Login</h1>
-        </div>        
-        <div class="d-flex justify-content-center">
-          <form id="loginForm" class="mt-5">
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label"
-                >Email address</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="loginEmail"
-                aria-describedby="emailHelp"
-                aria-describedby="inputGroupPrepend"
-                
-              />
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input
-                type="password"
-                minlength="8"
-                class="form-control"
-                id="loginPassword"
-              />
-            </div>
-            <div class="d-flex justify-content-center">
-              <button type="submit" class="w-100 btn btn-dark">Login</button>
-            </div>
-          </div>
-          </form>
+    <div id="post-container"></div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="js/login.js"></script>
     <script type="module" src="js/navbar.js"></script>
-
+    <script type="module" src="js/post.js"></script>
     <div>
       <footer class="bg-dark text-center text-white fixed-bottom">
         <div class="container">

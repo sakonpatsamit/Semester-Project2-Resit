@@ -10,8 +10,6 @@ let filteredPosts = [];
 btnSearch.addEventListener("click", () => {
   let searchQuery = searchbar.value;
 
-  console.log(searchQuery.length);
-
   if (!searchQuery || searchQuery.length <= 0) filteredPosts = posts;
   else {
     searchQuery = searchQuery.toLowerCase();
@@ -20,16 +18,12 @@ btnSearch.addEventListener("click", () => {
         post.title.rendered.toLowerCase().indexOf(searchQuery) > -1 ||
         post.excerpt.rendered.toLowerCase().indexOf(searchQuery) > -1
     );
-
-    console.log(filteredPosts);
   }
 
   renderPosts();
 });
 
 getPosts().then((res) => {
-  console.log(res);
-
   if (res && res.length > 0) {
     posts = res;
     filteredPosts = res;
@@ -57,13 +51,10 @@ function renderPost(post) {
   return `<div class="col-md-4">
     <div class="card mb-3">
       <div class="card-body">
-        <a class="card-title" href="post.html?id=${post.id}">${post.title.rendered}</a>
+        <a class="card-title" href="post.html?id=${post.id}"> <h2> ${post.title.rendered} </h2></a>
         <p class="card-text">
           ${post.excerpt.rendered}
         </p>
-        <a class="btn btn-dark" href="create.html?id=${post.id}">
-          Edit
-        </a>
       </div>
     </div>
   </div>`;

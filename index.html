@@ -19,10 +19,18 @@
       body {
         background-color: lightblue;
       }
+
+      a {
+        text-decoration: none;
+      }
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">  
+      <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
       <a href="index.html" class="navbar-brand mb-0 h1">Frontend Noroff</a>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav" id="navbar-list">
@@ -36,6 +44,7 @@
         <button id="btn-search"><i class="bi bi-search"></i></button>
       </div>
     </nav>
+    <h1 class="py-3 text-center">List of Posts</h1>
     <div class="mt-5 container">
       <div class="row" id="post-container"></div>
     </div>
@@ -46,5 +55,12 @@
     ></script>
     <script type="module" src="js/navbar.js"></script>
     <script type="module" src="js/home.js"></script>
+    <div>
+      <footer class="bg-dark text-center text-white fixed-bottom">
+        <div class="container">
+          <p>@sakonpatsamit</p>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

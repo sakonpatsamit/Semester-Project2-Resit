@@ -1,9 +1,10 @@
 import { logIn } from "./api/auth/auth.js";
+import { createErrorMessage } from "./utils.js";
 
 const loginForm = document.querySelector("#loginForm");
 const loginEmail = document.querySelector("#loginEmail");
 const loginPassword = document.querySelector("#loginPassword");
-const errorContainer = document.querySelector("#error");
+const errorContainer = document.querySelector("#login-title");
 
 loginForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -15,11 +16,9 @@ loginForm.addEventListener("submit", (event) => {
     if (res) {
       window.location = "index.html";
     } else
-      showErrorMessage("Whoops!", "Something went wrong. Please try again.");
+      errorContainer.innerHTML += createErrorMessage(
+        "Whoops!",
+        "Something went wrong. Please try again."
+      );
   });
 });
-
-function showErrorMessage(title, text) {
-  errorContainer.innerHTML = `<h4>${title}</h4><p>${text}</p>`;
-  errorContainer.classList.remove("d-none");
-}
